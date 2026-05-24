@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>OpenGeon</title>
+</head>
+<body>
+
+    <div class="container-fluid p-0">
+        <header>
+            <nav class="navbar nav w-100">
+                <div class="logo-div">
+                    <div class="logo-wrapper">
+                        <div class="logo">
+                            <span class="nome-logo">OpenG<span class="subnome-logo">eon</span></span>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" class="selector-cidade-btn" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="span-toggle">Selecionar cep</span><button class="btn-toggle dropdown-toggle"></button>
+                        </a>
+                        <ul class="dropdown-menu dropdown-search" aria-labelledby="dropdownMenuLink">
+                            <li><input type="text" class="dropdown-search-input" placeholder="cep: xxxxx-xxx"><a href="#" class="fa-solid fa-search search-btn"></a></li>
+                        </ul>
+                    </div>
+                    <a href="#" class="mapa-btn"">Mapa Mundi</a>
+                </div>  
+                <div class="acesso-wrapper">
+                    <a href="https://github.com/luizagsoaress" class="github-btn nav-link" draggable="false">Github</a> 
+                    <a href="https://www.linkedin.com/in/luizagsoaress" class="nav-link">Linkedin</a>
+                </div>
+            </nav>
+        </header>
+        <div class="container-t">
+            <aside class="aside">
+                <div class="aba-lateral">
+                    <div class="search-wrapper">
+                        <input type="text" class="search-input-lat" placeholder="Latitude">
+                        <input type="text" class="search-input-lon" placeholder="Longitude">
+                        <button class="lateral-search-btn fa-solid fa-search"></button>
+                    </div>
+                    <div class="dados-container">
+                        <div class="lat-wrapper"><label for="lat-dados">Latitude: </label><span class="lat-dat"></span></div>
+                        <div class="lon-wrapper"><label for="lon-dados">Longitude: </label><span class="lon-dat"></span></div>
+                        <div class="lon-wrapper"><label for="Tpostos-dados">Total de postos a um raio de 10km: </label><span class="Tpostos-dat"></span></div>
+                        <div class="lon-wrapper"><label for="Tmercados-dados">Total de mercados a um raio de 10km: </label><span class="Tmercados-dat"></span></div>
+                    </div>
+                </div>
+            </aside>
+            <aside class="aside-mobile">
+                <div class="mobile-menu">
+                    <div class="search-wrapper">
+                        <input type="text" class="search-input-lat" placeholder="Latitude">
+                        <input type="text" class="search-input-lon" placeholder="Longitude">
+                        <button class="lateral-search-btn fa-solid fa-search"></button>
+                    </div>
+                    <div class="dados-container">
+                        <div class="lat-wrapper"><label for="lat-dados">Latitude: </label><span class="lat-dat"></span></div>
+                        <div class="lon-wrapper"><label for="lon-dados">Longitude: </label><span class="lon-dat"></span></div>
+                        <div class="lon-wrapper"><label for="Tpostos-dados">Total de postos a um raio de 10km: </label><span class="Tpostos-dat"></span></div>
+                        <div class="lon-wrapper"><label for="Tmercados-dados">Total de mercados a um raio de 10km: </label><span class="Tmercados-dat"></span></div>
+                    </div>
+                </div>
+                <button class="fa-solid fa-angle-down mobile-toggle"></button>
+            </aside>
+            <div id="map" class="map">
+                <div class="label-map-container">
+                    <div class="postos-label-container"><div class="postos-mark"></div>Postos</div>
+                    <div class="mercados-label-container"><div class="mercados-mark"></div>Mercados</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="src/js/app.js"></script>
+    
+</body>
+</html>
